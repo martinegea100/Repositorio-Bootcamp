@@ -43,7 +43,7 @@ print("\nOriginal DataFrame:")
 print(df)
 
 # Mean Imputation without inplace for DataFrame
-df_mean_imputed = df.apply(lambda col: col.fillna(col.mean()))
+p
 print("\nDataFrame after Mean Imputation (without inplace):")
 print(df_mean_imputed)
 

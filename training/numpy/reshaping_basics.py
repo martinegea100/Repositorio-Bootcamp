@@ -3,7 +3,7 @@ import numpy as np
 # ------- Intro to Reshaping in NumPy -------
 
 # Create a simple 1D array
-one_d_array = np.array([1, 2, 3, 4, 5, 6])
+one_d_array = np.array([1, 2, 3, 4, 5, 6, 7])
 print("Original 1D array:", one_d_array)
 
 # Reshape the 1D array into a 2D array with shape (3, 2)
@@ -20,7 +20,10 @@ print(two_d_array_inferred)
 # ------- Reshaping with newaxis -------
 
 # Add a new axis to transform a 1D array into a column vector
-column_vector = one_d_array[:, np.newaxis]
+print(one_d_array.shape)
+
+column_vector = one_d_array[np.newaxis, np.newaxis, :]
+print(column_vector.shape)
 print("Column vector using newaxis:")
 print(column_vector)
 

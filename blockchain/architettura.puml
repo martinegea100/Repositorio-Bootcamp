@@ -1,0 +1,46 @@
+@startuml
+
+' Defining a group named "Blockchain" to encapsulate the blockchain nodes
+cloud Blockchain {
+    ' Defining individual nodes in the blockchain network as clouds
+    cloud "Nodo 1" as n1
+    cloud "Nodo 2" as n2
+    cloud "Nodo 3" as n3
+    cloud "Nodo n" as nn 
+     ' "Nodo n" implies the possibility of multiple or scalable nodes
+}
+
+' Establishing peer-to-peer connections between the nodes
+n1 -- n2
+n1 -- nn
+nn -left- n2
+nn -- n3
+n3 -- n2
+n3 -- n1
+
+' Representing an enterprise information system as a frame
+frame "Sistema Informativo Aziendale" as fr {
+    ' Including a database and several software artifacts within the system
+    database Database as db
+    artifact "Software 1" as sw1
+    artifact "Software 2" as sw2
+    artifact "Software n" as swn
+
+    ' Connecting the database to each software artifact
+    db -- sw1
+    db -- sw2
+    db -- swn
+}
+
+' Indicating secure communication (HTTPS) between the enterprise system and a blockchain node
+fr =down= nn : HTTPS
+
+' Adding external devices - an IoT device and a mobile app
+artifact "Dispositivo IoT" as iot1
+artifact "App mobile" as app
+
+' Showing secure HTTPS connections from the IoT device and mobile app to a blockchain node
+app =up= n1 : HTTPS
+iot1 =up= n1 : HTTPS
+
+@enduml
