@@ -1,6 +1,10 @@
 # Start by taking the user's height and weight as inputs.
+
+print(type("default string"))  # <class 'str'>
+
 height = float(input("enter your height in m: "))
 weight = float(input("enter your weight in kg: "))
+
 
 # Calculate the BMI using the formula: weight / (height^2)
 bmi = weight / (height ** 2)

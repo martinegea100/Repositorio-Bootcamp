@@ -1,0 +1,4 @@
+This is a line of random text.
+Another line of random text.
+Appended line 1 via OOP.
+Appended line 2 via OOP.

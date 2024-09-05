@@ -1,4 +1,4 @@
-reality = "Real World"  # This is the global variable
+sreality = "Real World"  # This is the global variable
 
 
 def dream_level_1():
