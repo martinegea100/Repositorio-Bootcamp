@@ -37,6 +37,9 @@ def render_character(character: str) -> None:
 # Example usage: render the character '0'
 #character = '0'
 character = '世'
+character = '😎'
+
+
 
 render_character(character)
 

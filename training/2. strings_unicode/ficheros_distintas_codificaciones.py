@@ -30,5 +30,5 @@ def write_encoded_files(input_string, file_basename):
 
 # Example usage
 input_string = "Hello, World! 😊"
-file_basename = "example"ls
+file_basename = "example"
 write_encoded_files(input_string, file_basename)
