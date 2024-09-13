@@ -48,9 +48,12 @@ x = [1, 2, 3]
 y = [1, 2, 3]
 z = x
 
+print(f"x0 is y0: /{x[0] is y[0]}")  # True, because we are reusing integers
+print(f"x equal y: {x == y}")  # True
 print(f"x is z: {x is z}")  # True, because z points to the same object as x
 print(f"x is y: {x is y}")  # False, because x and y are different objects in memory
 print(f"x is not y: {x is not y}")  # True, because x and y are not the same object
+
 
 # Fun example of falsy and truthy values:
 happy = False
@@ -59,6 +62,17 @@ if happy:
 else:
     print("😔 I'm not happy...")
 
+
+alto = 5
+ancho = 17
+espacio_maximo = 22
+
+if alto + ancho < espacio_maximo:
+    print("cabe")
+else:
+    print("no cabe") 
+
+print("el ancho es" , alto + ancho, " y esta genial")   
 # Checking if a list is empty:
 my_list = []
 if my_list:
@@ -73,15 +87,22 @@ if name:
 else:
     print("🔍 No name provided.")
 
+print("This is a raw string.  \n  newline.")
+print(r"This is a raw string.  \n not newline.")
+print("This is a raw string.  \\n not newline.")
+print(f"x is not y: \\{{x}}") 
+
+
+
 # Custom object truthiness example:
 class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+    def __init__(pepito, arg1, arg2):
+        pepito.name = arg1
+        pepito.age = arg2
 
-    def __bool__(self):
+    def __bool__(juanito):
         # Consider a person 'truthy' if they are an adult (18 or older)
-        return self.age >= 18
+        return juanito.age >= 18
 
 # Creating instances of Person
 teenager = Person("Alice", 16)
