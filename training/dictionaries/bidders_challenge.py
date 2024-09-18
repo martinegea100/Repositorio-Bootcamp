@@ -32,5 +32,5 @@ def find_highest_bidder(bidding_record):
     # Print out the highest bidder.
 
     # TODO: Use a loop to continue receiving bids until there are no more bidders.
-
+    print(None)
     # Remember to clear the console after each bid to keep the current bid private.
